@@ -9,9 +9,6 @@ public class TileSelect : MonoBehaviour
 
     public GameObject testObject;
 
-    public GameObject placeableTile;
-
-    public static GameObject[] testObjects;
 
     //Changes to this color on enter
     Color tileColor = Color.red;
@@ -21,15 +18,12 @@ public class TileSelect : MonoBehaviour
 
     MeshRenderer TileRenderer;
 
+    [SerializeField] private LayerMask placeableTile;
+
+    public bool isTowerPlaceable;
+
     //Determines whether a tower is placeable on a tile or not
-    public static bool isTowerPlaceable;
 
-    //public static int unitStocks;
-
-    private void Awake()
-    {
-        placeableTile = GameObject.FindWithTag("PlacementTest");
-    }
     void Start()
     {
         Debug.Log("start");
@@ -42,22 +36,34 @@ public class TileSelect : MonoBehaviour
         tileOriginColor = TileRenderer.material.color;
 
         //unitStocks = 5;
-        
-        if(placeableTile == GameObject.FindWithTag("PlacementTest"))
+
+        if (placeableTile == LayerMask.GetMask("PlacementTest"))
         {
-            isTowerPlaceable = true;
+            this.isTowerPlaceable = true;
+            Debug.Log("Skill issue negated");
+        }
+
+        
+        if (placeableTile != LayerMask.GetMask("PlacementTest"))
+        {
+            this.isTowerPlaceable = false;
+            Debug.Log("Absolute skill issue, also Becky is een idioot");
+        }
+        else
+        {
+           
         }
     }
 
     
     void Update()
     {
- 
+       
     }
 
     void OnMouseEnter()
     {
-        if(isTowerPlaceable == true)
+        if (this.isTowerPlaceable)
         {
             Debug.Log("Mouse has entered the chat.");
             TileRenderer.material.color = tileColor;
@@ -72,14 +78,15 @@ public class TileSelect : MonoBehaviour
 
     public void OnMouseOver()
     {
-        
-        if (isTowerPlaceable == true)
+
+        if (this.isTowerPlaceable)
         {
             if (Input.GetMouseButtonDown(0)) 
             {
                 Instantiate(testObject, transform.position, Quaternion.identity);
                 //unitStocks--;
                 Debug.Log(transform.position);
+                this.isTowerPlaceable = false;
 
             }
         }

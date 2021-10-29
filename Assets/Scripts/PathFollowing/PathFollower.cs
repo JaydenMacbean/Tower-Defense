@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //beweegt langs een pad
 
 public class PathFollower : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float arrivalThreshold;
+    [SerializeField] private int StageHealth;
     public Path path;
     public WayPoint currentWaypoint;
     private void Start()
@@ -42,5 +44,10 @@ public class PathFollower : MonoBehaviour
     void PathComplete()
     {
         Destroy(gameObject);
+        StageHealth--;
+        if (StageHealth == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

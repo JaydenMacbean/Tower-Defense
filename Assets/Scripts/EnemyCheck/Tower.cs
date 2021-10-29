@@ -4,9 +4,11 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(UnitInRangeCheck))]
-public class Tower : MonoBehaviour
+public class Tower : Unit
 {
     private UnitInRangeCheck unitInRangeChecker;
+
+   
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class Tower : MonoBehaviour
         if(unit!=null) 
         {
             print(unit.name);
+            unit.TakeDamage(1);
         }
     }
 }

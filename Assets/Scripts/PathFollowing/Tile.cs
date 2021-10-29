@@ -12,10 +12,10 @@ public class Tile : MonoBehaviour
 
 
 
-    [SerializeField] private bool IsBuildable;
-    [SerializeField] private bool IsSpawnPoint;
-    [SerializeField] private bool IsWayPoint;
-    [SerializeField] private bool IsPath;
+    [SerializeField] private bool isBuildable;
+    [SerializeField] private bool isSpawnPoint;
+    [SerializeField] private bool isWayPoint;
+    [SerializeField] private bool isPath;
 
 
 
@@ -32,22 +32,22 @@ public class Tile : MonoBehaviour
     public bool GetIsBuildable()
     {
 
-        return IsBuildable;
+        return isBuildable;
     }
     public bool GetIsWayPoint()
     {
 
-        return IsWayPoint;
+        return isWayPoint;
     }
     public bool GetIsPath()
     {
 
-        return IsPath;
+        return isPath;
     }
     public bool GetIsSpawnpoint()
     {
 
-        return IsSpawnPoint;
+        return isSpawnPoint;
     }
 
 

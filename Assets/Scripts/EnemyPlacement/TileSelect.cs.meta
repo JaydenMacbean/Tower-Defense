@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - cam: {instanceID: 0}
   - testObject: {fileID: 2542816904907961133, guid: 4246e9988f1f55f4b8a19d09bdb72b40, type: 3}
+  - placeableTile: {fileID: 6359170283845565666, guid: 6d889265ee67ac145aa042e8e5a22268, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -56,18 +56,23 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy&amp;Turret\Dying.cs" />
     <Compile Include="Assets\Scripts\EnemyPlacement\PlacementTestWIP.cs" />
+    <Compile Include="Assets\Scripts\EnemyPlacement\TileCheck.cs" />
+    <Compile Include="Assets\Scripts\EnemyCheck\Tower.cs" />
     <Compile Include="Assets\Scripts\PathFollowing\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\EnemyCheck\UnitInRangeCheck.cs" />
     <Compile Include="Assets\Scripts\PathFollowing\Tile.cs" />
+    <Compile Include="Assets\Scripts\GameStates\RunState.cs" />
     <Compile Include="Assets\Scripts\PathFollowing\PathFollow.cs" />
-    <Compile Include="Assets\Scripts\Unit.cs" />
+    <Compile Include="Assets\Scripts\GameStates\BuildState.cs" />
+    <Compile Include="Assets\Scripts\GameStates\GameState.cs" />
+    <Compile Include="Assets\Scripts\GameStates\StateShift.cs" />
+    <Compile Include="Assets\Scripts\Enemy&amp;Turret\Unit.cs" />
     <Compile Include="Assets\Scripts\EnemyPlacement\PlacementLimit.cs" />
     <Compile Include="Assets\Scripts\EnemyPlacement\TileSelect.cs" />
-    <Compile Include="Assets\Scripts\EnemyPlacement\TileSelectWIP.cs" />
     <Compile Include="Assets\Scripts\PathFollowing\WayPoint.cs" />
     <Compile Include="Assets\Scripts\PathFollowing\Path.cs" />
-    <Compile Include="Assets\Scripts\EnemyCheck\UnitInRangeCheck.cs" />
-    <Compile Include="Assets\Scripts\EnemyCheck\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

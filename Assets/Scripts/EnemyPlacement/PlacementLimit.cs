@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class PlacementLimit : TileSelect
 {
-    /*public int StockCheck;
-    public bool Placeable;
+    /*public int stockCheck;
+    public bool placeable;
     // Start is called before the first frame update
     void Start()
     {
-        StockCheck = TileSelect.unitStocks;
-        StockCheck = 5;
-        Placeable = TileSelect.isTowerPlaceable;
+        stockCheck = TileSelect.unitStocks;
+        stockCheck = 5;
+        placeable = TileSelect.isTowerPlaceable;
     }
 
     // Update is called once per frame
@@ -20,16 +20,16 @@ public class PlacementLimit : TileSelect
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StockCheck--;
-            if(StockCheck == 0)
+            stockCheck--;
+            if(stockCheck == 0)
             {
-                Placeable = false;
-                Debug.Log(Placeable);
+                placeable = false;
+                Debug.Log(placeable);
             }
 
-            if(StockCheck != 0)
+            if(stockCheck != 0)
             {
-                Debug.Log(Placeable);
+                Debug.Log(placeable);
             }
         }
     }*/
